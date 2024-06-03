@@ -66,7 +66,7 @@ export const AppReducer = (state, action) => {
             };
         case 'CHG_CURRENCY':
             action.type = "DONE";
-            state.currency = action.payload;
+            state.Currency = action.payload;
             return {
                 ...state
             }
@@ -113,7 +113,8 @@ export const AppProvider = (props) => {
                 budget: state.budget,
                 remaining: remaining,
                 dispatch,
-                Currency: state.currency
+                Currency: state.Currency,
+                
             }}
         >
             {props.children}
